@@ -1,0 +1,67 @@
+[api]
+listen="0.0.0.0:11363"
+
+# [[rpc]]
+# host="http://203.86.236.21/testnet"
+# admin="admin"
+# password="123"
+# net="testnet"
+
+[[rpc]]
+host="http://203.86.236.20:28234"
+admin="0.10.6-mixnet-test"
+password="0.10.6-mixnet-test"
+net="mixnet"
+
+[[rpc]]
+host="http://203.86.236.19:28234"
+admin="0.10.6-mixnet-test"
+password="0.10.6-mixnet-test"
+net="mixnet"
+
+[evm]
+# rpc = [
+# "http://203.86.236.20:18545",
+# "http://203.86.236.21:18545",
+# "http://146.196.54.208:1234",
+# "https://meer.kahf.info/evm",
+# ]
+# token = "0xF024348Fed6F4F53ed4D93D94F82718938d3784e"
+# mnemonic = "tooth manage income garlic electric hobby say pitch object quick discover assist"
+# address = ""
+# account = 10
+
+rpc = [
+    "http://103.20.60.52:18545",
+]
+
+token = "0x49eEc459e7470CaE00a13Ec4678B9ef49B672086"
+mnemonic = "tooth manage income garlic electric hobby say pitch object quick discover assist"
+address = ""
+account = 10
+
+[key]
+dir = "key"
+
+[auth]
+secretKey="123456"
+jwt=false
+
+[db]
+# mysql | sqlserver
+dbtype="mysql"
+user="client"
+password="Qitmeer@mariadb.client"
+address="203.86.236.21:3306"
+dbname="testnet"
+
+[log]
+# console=12 | file=11
+mode=12
+# debug=0 | info=1 | warn=2 | fail=3 | error=4 | email=5
+level=0
+path="logs"
+
+
+[cpu]
+number = 8

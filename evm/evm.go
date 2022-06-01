@@ -22,7 +22,7 @@ import (
 	"time"
 )
 
-const CHAN_ID = 223
+const CHAN_ID = 8132
 
 var Coin = big.NewInt(0).Mul(big.NewInt(1e9), big.NewInt(1e9))
 

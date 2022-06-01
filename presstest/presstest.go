@@ -30,10 +30,10 @@ type Engine struct {
 }
 
 func NewEngine(cfg *config.Config, idb db.IDB) (*Engine, error) {
-	key, err := keystore.LoadKey(cfg.Key.Dir)
-	if err != nil {
-		return nil, err
-	}
+	//key, err := keystore.LoadKey(cfg.Key.Dir)
+	//if err != nil {
+	//	return nil, err
+	//}
 	rpcs := []*rpc.Client{}
 	for _, rpcCfg := range cfg.Rpc {
 		rpcs = append(rpcs, rpc.NewClient(&config.Rpc{
@@ -44,7 +44,7 @@ func NewEngine(cfg *config.Config, idb db.IDB) (*Engine, error) {
 	}
 
 	ctx, cancel := context.WithCancel(context.Background())
-	return &Engine{key: key, db: idb, cfg: cfg, ctx: ctx, cancel: cancel, rpcs: rpcs}, nil
+	return &Engine{key: nil, db: idb, cfg: cfg, ctx: ctx, cancel: cancel, rpcs: rpcs}, nil
 }
 
 func (e *Engine) Stop() {
